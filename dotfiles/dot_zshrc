@@ -1,6 +1,11 @@
 # .zshrc config file
 unsetopt correct correctall
 
+# Antidote
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
+
 # Load dotfiles
 for file in ~/.dotfiles/.{aliases,functions,exports,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
