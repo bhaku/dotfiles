@@ -29,3 +29,13 @@ else
   echo "⚪️  Installing Chezmoi"
   brew install chezmoi
 fi
+
+if [ -d "$HOME/.local/share/chezmoi/.git" ]; then
+  echo "ℹ️  Chezmoi already initialized, pulling latest changes..."
+  chezmoi update
+  echo "✅  Chezmoi updated"
+else
+  chezmoi init bhaku
+  chezmoi apply
+  echo "✅  Chezmoi initialized"
+fi
