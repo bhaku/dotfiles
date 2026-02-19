@@ -6,6 +6,9 @@ source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
+# fzf
+source <(fzf --zsh)
+
 # Load dotfiles
 for file in ~/.dotfiles/.{aliases,functions,exports,extra}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
