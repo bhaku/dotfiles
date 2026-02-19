@@ -1,5 +1,16 @@
 # .extra
 
+# --- 1Password CLI ---
+if command -v op >/dev/null; then
+  eval "$(op completion zsh)"
+  compdef _op op
+fi
+
+# --- FZF-Tab Konfiguracja ---
+# Używamy bat do podglądu plików i eza do katalogów
+zstyle ':fzf-tab:complete:*:*' fzf-preview 'bat --color=always --line-range :30 $realpath 2>/dev/null'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --color=always --icons --level=2 $realpath'
+
 # Zoxide with "j" alias
 eval "$(zoxide init zsh --cmd j)"
 
@@ -12,6 +23,7 @@ SAVEHIST=2999        # Number of commands saved in the history file on disk
 # --- Write & Sync Options ---
 setopt append_history       # Append to history file instead of overwriting it
 setopt inc_append_history   # Save each command immediately after execution
+setopt extended_history     # Save timestamp and duration of commands to history file
 setopt share_history        # Share history across all active terminal sessions
 
 # --- Duplicates & Cleanup ---
