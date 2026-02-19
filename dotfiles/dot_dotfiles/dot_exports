@@ -22,3 +22,6 @@ export TG_PROVIDER_CACHE_DIR="$XDG_CACHE_HOME/terragrunt/providers"
 
 # K9s
 export K9S_CONFIG_DIR="$XDG_CONFIG_HOME/k9s"
+
+# uv (Python)
+export UV_CACHE_DIR="$XDG_CACHE_HOME/uv"

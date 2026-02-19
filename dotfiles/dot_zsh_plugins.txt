@@ -1,6 +1,6 @@
 mattmc3/ez-compinit
 zsh-users/zsh-completions
-zsh-users/zsh-suggestions
+zsh-users/zsh-autosuggestions
 Aloxaf/fzf-tab
 ohmyzsh/ohmyzsh path:plugins/brew
 ohmyzsh/ohmyzsh path:plugins/git
