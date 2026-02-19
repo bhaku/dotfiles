@@ -1,0 +1,1 @@
+Setup `curl -sfL https://raw.githubusercontent.com/bhaku/dotfiles/master/setup.sh | bash`
