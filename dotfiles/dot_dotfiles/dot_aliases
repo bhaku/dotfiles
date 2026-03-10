@@ -14,3 +14,6 @@ alias lt='eza --tree --level=2 --icons'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias md='mkdir -p'
+
+# Kubecolor
+alias kubectl="kubecolor"
